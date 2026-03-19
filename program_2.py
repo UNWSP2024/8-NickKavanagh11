@@ -7,17 +7,18 @@
 
 # Start your changes on line 13
 
-def word_separator(sentence):
+def main():
+    text = input("Enter a concatenated sentence (e.g., StopAndSmellTheRoses): ")
 
-    new_sentence = ""
-    #    Add your logic here
+    result = text[0]  # first letter stays uppercase
 
-    return new_sentence.strip()
+    for char in text[1:]:
+        if char.isupper():
+            result += " " + char.lower()
+        else:
+            result += char
 
-# Example usage
-if __name__=="__main__":
-    sentence = "StopAndSmellTheRoses"
+    print("Separated sentence:", result)
 
-    new_sentence = word_separator(sentence)
-
-    print(new_sentence)
+if __name__ == "__main__":
+    main()
