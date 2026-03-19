@@ -5,17 +5,16 @@
 
 # Add your logic starting on line 11
 
-def initials_generator(personsName):
+def main():
+    full_name = input("Enter your first, middle, and last name: ")
 
-    personsInitials = ""
-    #    Add your logic here
+    names = full_name.split()
 
-    return personsInitials.strip()
+    if len(names) >= 3:
+        initials = f"{names[0][0].upper()}. {names[1][0].upper()}. {names[2][0].upper()}."
+        print("Initials:", initials)
+    else:
+        print("Please enter first, middle, and last names.")
 
-# Example usage
-if __name__=="__main__":
-    personsName = input('Enter the users first, middle, and last name')
-
-    initials = initials_generator(personsName)
-
-    print(initials)
+if __name__ == "__main__":
+    main()
