@@ -1,0 +1,19 @@
+START
+
+Create empty list to store courses
+
+WHILE user wants to add courses
+    Prompt user for course ID
+    Prompt user for course name
+    Store both as a pair in the list
+END WHILE
+
+Prompt user to enter a subject (e.g., "COS")
+
+FOR each course in the list
+    IF course ID starts with the subject
+        Display course ID and course name
+    END IF
+END FOR
+
+END
